@@ -1,0 +1,33 @@
+@RateLimiting.Playground_HostAddress = https://localhost:7150
+@token = fake-token
+
+POST {{RateLimiting.Playground_HostAddress}}/api/Auth/login
+
+###
+
+POST {{RateLimiting.Playground_HostAddress}}/api/Auth/reset-password
+
+###
+
+GET {{RateLimiting.Playground_HostAddress}}/api/Products
+
+###
+
+GET {{RateLimiting.Playground_HostAddress}}/api/Products/1
+
+###
+
+GET {{RateLimiting.Playground_HostAddress}}/api/Profile/public
+
+###
+
+GET {{RateLimiting.Playground_HostAddress}}/api/Profile/me
+Authorization: Bearer {{token}}
+
+###
+
+POST {{RateLimiting.Playground_HostAddress}}/api/Admin/moderate
+
+###
+
+POST {{RateLimiting.Playground_HostAddress}}/api/Webhooks/payment
